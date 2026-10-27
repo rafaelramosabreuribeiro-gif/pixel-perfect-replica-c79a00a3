@@ -96,9 +96,6 @@ export function Projects() {
           {projects.map((p) => (
             <ProjectCard key={p.index} project={p} />
           ))}
-          <div className="md:col-span-2">
-            <PlaceholderCard />
-          </div>
         </div>
       </div>
     </section>
