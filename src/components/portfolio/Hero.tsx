@@ -1,0 +1,119 @@
+import { ArrowUpRight, Gauge, Smartphone } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { useTilt } from "@/hooks/use-tilt";
+import { whatsappLink } from "@/lib/site";
+import { WhatsAppIcon } from "./icons";
+
+function CodeMockup() {
+  const tilt = useTilt<HTMLDivElement>(5);
+  const k = "text-code-keyword";
+  const s = "text-code-string";
+  const f = "text-code-fn";
+  const t = "text-code-tag";
+  const c = "text-code-comment";
+
+  return (
+    <div className="relative">
+      <div className="absolute -inset-10 orb-neon" aria-hidden />
+      <div
+        ref={tilt.ref}
+        onPointerMove={tilt.onPointerMove}
+        onPointerLeave={tilt.onPointerLeave}
+        className="glass glow-border tilt spotlight relative overflow-hidden rounded-3xl shadow-card"
+      >
+        <div className="flex items-center gap-2 border-b border-border px-5 py-3.5">
+          <span className="size-3 rounded-full bg-destructive/80" />
+          <span className="size-3 rounded-full bg-code-fn/80" />
+          <span className="size-3 rounded-full bg-primary/80" />
+          <span className="ml-3 font-mono text-xs text-muted-foreground">LandingPage.tsx</span>
+        </div>
+        <pre className="overflow-x-auto px-5 py-5 font-mono text-[0.78rem] leading-relaxed sm:text-sm">
+          <code>
+            <span className={c}>{"// feito para converter"}</span>
+            {"\n"}
+            <span className={k}>export default function</span> <span className={f}>LandingPage</span>() {"{"}
+            {"\n  "}
+            <span className={k}>const</span> cliente = <span className={f}>useVisitante</span>();
+            {"\n\n  "}
+            <span className={k}>return</span> (
+            {"\n    "}
+            <span className={t}>&lt;Hero</span>
+            {"\n      "}titulo=<span className={s}>"Seu negócio, online"</span>
+            {"\n      "}performance=<span className={s}>{"{100}"}</span>
+            {"\n      "}mobile=<span className={s}>"perfeito"</span>
+            {"\n    "}
+            <span className={t}>/&gt;</span>
+            {"\n    "}
+            <span className={t}>&lt;CTA</span> onClick={"{"}() =&gt; cliente.<span className={f}>converter</span>(){"}"}{" "}
+            <span className={t}>/&gt;</span>
+            {"\n  "});
+            {"\n"}
+            {"}"}
+            <span className="ml-0.5 inline-block h-4 w-2 translate-y-0.5 bg-primary animate-blink" />
+          </code>
+        </pre>
+      </div>
+
+      <div className="glass absolute -left-4 bottom-8 hidden items-center gap-3 rounded-2xl px-4 py-3 shadow-card animate-float sm:flex">
+        <span className="grid size-9 place-items-center rounded-xl bg-primary/15 text-primary">
+          <Gauge className="size-5" />
+        </span>
+        <div className="leading-tight">
+          <p className="font-mono text-lg font-semibold text-primary">100</p>
+          <p className="text-xs text-muted-foreground">Performance</p>
+        </div>
+      </div>
+
+      <div
+        className="glass absolute -right-3 -top-5 hidden items-center gap-2 rounded-full px-4 py-2 shadow-card animate-float sm:flex"
+        style={{ animationDelay: "1.5s" }}
+      >
+        <Smartphone className="size-4 text-accent" />
+        <span className="text-xs font-medium">Mobile-first</span>
+      </div>
+    </div>
+  );
+}
+
+export function Hero() {
+  return (
+    <section id="inicio" className="relative overflow-hidden pb-24 pt-36 md:pb-32 md:pt-44">
+      <div className="absolute inset-0 bg-grid" aria-hidden />
+      <div className="absolute -right-40 top-10 size-[520px] orb-cyan" aria-hidden />
+
+      <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-5 lg:grid-cols-[1.1fr_1fr]">
+        <div>
+          <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-xs text-muted-foreground">
+            <span className="size-2 rounded-full bg-primary animate-pulse-glow" />
+            Disponível para novos projetos
+          </span>
+
+          <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-[3.6rem]">
+            Sites e landing pages que transformam <span className="text-gradient">visitantes em clientes</span>
+          </h1>
+
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            Design moderno, carregamento ultrarrápido e experiência perfeita no celular — feitos para gerar
+            resultados para o seu negócio.
+          </p>
+
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Button asChild variant="neon" size="xl">
+              <a href="#projetos">
+                Ver Projetos <ArrowUpRight />
+              </a>
+            </Button>
+            <Button asChild variant="glass" size="xl">
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon /> Falar no WhatsApp
+              </a>
+            </Button>
+          </div>
+        </div>
+
+        <CodeMockup />
+      </div>
+    </section>
+  );
+}
