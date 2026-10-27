@@ -1,5 +1,6 @@
 import odontoImg from "@/assets/odonto-prime.jpg.asset.json";
 import apexImg from "@/assets/apex-fitness.jpg.asset.json";
+import savrImg from "@/assets/savr.jpg";
 
 export const site = {
   name: "Rafael Ramos",
@@ -58,6 +59,19 @@ export const projects: Project[] = [
     image: apexImg.url,
     siteUrl: "https://pixel-perfect-mirror-6217.lovable.app/",
     // TODO: add the APEX repository link
+    codeUrl: null,
+  },
+  {
+    index: "03",
+    name: "SAVR",
+    subtitle: "Fine Dining & Gastronomia",
+    category: "Gastronomia & Eventos · Projeto Conceitual",
+    description:
+      "Landing page sofisticada de alta gastronomia, com menu interativo por categorias, reserva de mesas via WhatsApp, galeria imersiva e estética dark refinada.",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
+    image: savrImg,
+    siteUrl: "https://savr-golden-table-experience.lovable.app/",
+    // TODO: add the SAVR repository link
     codeUrl: null,
   },
 ];
