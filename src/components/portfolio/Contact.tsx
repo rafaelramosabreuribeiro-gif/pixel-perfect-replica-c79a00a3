@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useReveal } from "@/hooks/use-reveal";
-import { buildQuoteMessage, projectTypes, quoteSchema } from "@/lib/quote";
+import { buildQuoteMessage, projectTypes, quoteSchema, type Quote } from "@/lib/quote";
 import { site, whatsappLink } from "@/lib/site";
 import { WhatsAppIcon } from "./icons";
 import { SectionHeading } from "./SectionHeading";
@@ -17,15 +17,15 @@ const fieldClass =
 
 export function Contact() {
   const ref = useReveal<HTMLDivElement>();
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<Partial<Record<keyof Quote, string>>>({});
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget));
     const parsed = quoteSchema.safeParse(data);
     if (!parsed.success) {
-      const errs: Record<string, string> = {};
-      for (const issue of parsed.error.issues) errs[String(issue.path[0])] ??= issue.message;
+      const errs: Partial<Record<keyof Quote, string>> = {};
+      for (const issue of parsed.error.issues) errs[issue.path[0] as keyof Quote] ??= issue.message;
       setErrors(errs);
       return;
     }
