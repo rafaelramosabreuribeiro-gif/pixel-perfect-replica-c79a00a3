@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, Hammer } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { useReveal } from "@/hooks/use-reveal";
@@ -63,22 +63,6 @@ function ProjectCard({ project }: { project: Project }) {
           )}
         </div>
       </div>
-    </article>
-  );
-}
-
-function PlaceholderCard() {
-  return (
-    <article className="relative flex min-h-[320px] flex-col items-center justify-center overflow-hidden rounded-3xl border border-dashed border-primary/30 bg-secondary/20 p-8 text-center">
-      <div className="absolute inset-0 bg-grid opacity-60" aria-hidden />
-      <span className="relative font-mono text-6xl font-bold text-gradient opacity-80">03</span>
-      <span className="relative mt-5 grid size-12 place-items-center rounded-2xl bg-primary/10 text-primary">
-        <Hammer className="size-5" />
-      </span>
-      <h3 className="relative mt-4 font-display text-xl font-semibold">Novo projeto em breve</h3>
-      <p className="relative mt-2 inline-flex items-center gap-2 font-mono text-xs text-muted-foreground">
-        <span className="size-2 rounded-full bg-primary animate-pulse-glow" /> Em desenvolvimento
-      </p>
     </article>
   );
 }
