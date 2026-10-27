@@ -32,7 +32,7 @@ export function Header() {
       <div
         className={cn(
           "mx-auto flex max-w-6xl items-center justify-between rounded-full px-5 py-3 transition-all duration-300",
-          scrolled ? "glass bg-background/80 shadow-card" : "border border-transparent",
+          scrolled ? "glass-strong shadow-card" : "border border-transparent",
         )}
       >
         <Logo />

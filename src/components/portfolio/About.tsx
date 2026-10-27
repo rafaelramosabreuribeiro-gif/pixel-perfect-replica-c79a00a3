@@ -24,7 +24,7 @@ const pillars = [
 export function About() {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="sobre" className="relative py-24 md:py-32">
+    <section id="sobre" className="relative py-20 md:py-24">
       <div ref={ref} className="reveal mx-auto grid max-w-6xl gap-14 px-5 lg:grid-cols-[1fr_1.1fr] lg:items-center">
         <div>
           <SectionHeading eyebrow="sobre mim" title={<>Olá, eu sou o <span className="text-gradient">Rafael Ramos</span></>} />

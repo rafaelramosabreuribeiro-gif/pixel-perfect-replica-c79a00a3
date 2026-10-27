@@ -69,7 +69,7 @@ function ServiceCard({ service }: { service: Service }) {
 export function Services() {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="servicos" className="relative py-24 md:py-32">
+    <section id="servicos" className="relative py-20 md:py-24">
       <div className="absolute -left-40 top-1/3 size-[480px] orb-neon opacity-60" aria-hidden />
       <div ref={ref} className="reveal relative mx-auto max-w-6xl px-5">
         <SectionHeading eyebrow="serviços" title="Como posso ajudar o seu negócio">

@@ -95,6 +95,7 @@
   --cyan: oklch(0.82 0.14 205);
   --glass: oklch(0.22 0.02 230 / 45%);
   --glass-border: oklch(1 0 0 / 10%);
+  --glass-strong: oklch(0.145 0.014 230 / 82%);
 
   --code-keyword: oklch(0.8 0.14 205);
   --code-string: oklch(0.88 0.21 152);
@@ -161,6 +162,13 @@
 /* Frosted glass surface */
 @utility glass {
   background: var(--glass);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid var(--glass-border);
+}
+
+/* Denser glass for overlays like the sticky header */
+@utility glass-strong {
+  background: var(--glass-strong);
   backdrop-filter: blur(18px) saturate(140%);
   border: 1px solid var(--glass-border);
 }

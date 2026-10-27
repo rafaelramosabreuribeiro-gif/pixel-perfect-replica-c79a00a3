@@ -82,7 +82,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-grid" aria-hidden />
       <div className="absolute -right-40 top-10 size-[520px] orb-cyan" aria-hidden />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-16 px-5 lg:grid-cols-[1.1fr_1fr]">
+      <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-5 lg:grid-cols-[1.1fr_1fr]">
         <div className="min-w-0">
           <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-xs text-muted-foreground">
             <span className="size-2 rounded-full bg-primary animate-pulse-glow" />

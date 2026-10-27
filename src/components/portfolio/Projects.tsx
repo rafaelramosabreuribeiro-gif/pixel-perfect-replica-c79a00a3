@@ -86,7 +86,7 @@ function PlaceholderCard() {
 export function Projects() {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="projetos" className="relative py-24 md:py-32">
+    <section id="projetos" className="relative py-20 md:py-24">
       <div ref={ref} className="reveal mx-auto max-w-6xl px-5">
         <SectionHeading eyebrow="projetos em destaque" title="Trabalhos recentes">
           Landing pages pensadas para converter, com visual marcante e navegação fluida em qualquer tela.

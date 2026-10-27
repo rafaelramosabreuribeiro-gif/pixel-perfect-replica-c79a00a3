@@ -36,7 +36,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contato" className="relative py-24 md:py-32">
+    <section id="contato" className="relative py-20 md:py-24">
       <div className="absolute right-0 top-0 size-[460px] orb-cyan opacity-70" aria-hidden />
       <div ref={ref} className="reveal relative mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-[1fr_1.15fr]">
         <div>
