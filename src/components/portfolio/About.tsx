@@ -58,8 +58,7 @@ export function About() {
           {pillars.map(({ icon: Icon, title, text }, i) => (
             <li
               key={title}
-              className="glass glow-border flex gap-5 rounded-3xl p-6 shadow-card transition-transform duration-500 hover:-translate-y-1"
-              style={{ marginLeft: `${i * 1.5}rem` }}
+              className={`glass glow-border flex gap-5 rounded-3xl p-6 shadow-card transition-transform duration-500 hover:-translate-y-1 ${["", "lg:ml-6", "lg:ml-12"][i]}`}
             >
               <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-primary/10 text-primary">
                 <Icon className="size-6" />
