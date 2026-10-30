@@ -31,17 +31,17 @@ export function Contact() {
     }
     setErrors({});
     window.open(whatsappLink(buildQuoteMessage(parsed.data)), "_blank", "noopener,noreferrer");
-    toast.success("Abrindo o WhatsApp com seu pedido de orçamento!");
+    toast.success("Opening WhatsApp with your quote request!");
     e.currentTarget.reset();
   }
 
   return (
-    <section id="contato" className="relative py-20 md:py-24">
+    <section id="contact" className="relative py-20 md:py-24">
       <div className="absolute right-0 top-0 size-[460px] orb-cyan opacity-70" aria-hidden />
       <div ref={ref} className="reveal relative mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-[1fr_1.15fr]">
         <div>
-          <SectionHeading eyebrow="contato" title={<>Vamos tirar seu projeto <span className="text-gradient">do papel?</span></>}>
-            Conte o que você precisa e receba um orçamento sem compromisso. Respondo rapidinho.
+          <SectionHeading eyebrow="contact" title={<>Let's build your next <span className="text-gradient">web project together</span></>}>
+            Tell me what you need and get a free, no-obligation quote. I reply fast.
           </SectionHeading>
 
           <div className="mt-9 space-y-3">
@@ -56,7 +56,7 @@ export function Contact() {
               </span>
               <span>
                 <span className="block font-semibold">WhatsApp</span>
-                <span className="text-sm text-muted-foreground">Fale comigo direto</span>
+                <span className="text-sm text-muted-foreground">Message me directly</span>
               </span>
             </a>
             <a
@@ -82,7 +82,7 @@ export function Contact() {
               </span>
               <span>
                 <span className="block font-semibold">GitHub</span>
-                <span className="text-sm text-muted-foreground">Veja meus repositórios</span>
+                <span className="text-sm text-muted-foreground">Browse my repositories</span>
               </span>
             </a>
           </div>
@@ -91,19 +91,19 @@ export function Contact() {
         <form onSubmit={onSubmit} noValidate className="glass glow-border space-y-5 rounded-3xl p-6 shadow-card sm:p-8">
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="space-y-2">
-              <Label htmlFor="name">Nome</Label>
-              <Input id="name" name="name" placeholder="Seu nome" className={fieldClass} aria-invalid={!!errors.name} />
+              <Label htmlFor="name">Name</Label>
+              <Input id="name" name="name" placeholder="Your name" className={fieldClass} aria-invalid={!!errors.name} />
               {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
             </div>
             <div className="space-y-2">
-              <Label htmlFor="contact">E-mail ou WhatsApp</Label>
-              <Input id="contact" name="contact" placeholder="voce@email.com" className={fieldClass} aria-invalid={!!errors.contact} />
+              <Label htmlFor="contact">E-mail or WhatsApp</Label>
+              <Input id="contact" name="contact" placeholder="you@email.com" className={fieldClass} aria-invalid={!!errors.contact} />
               {errors.contact && <p className="text-sm text-destructive">{errors.contact}</p>}
             </div>
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="type">Tipo de projeto</Label>
+            <Label htmlFor="type">Project type</Label>
             <select
               id="type"
               name="type"
@@ -119,12 +119,12 @@ export function Contact() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message">Sobre o projeto</Label>
+            <Label htmlFor="message">About the project</Label>
             <Textarea
               id="message"
               name="message"
               rows={5}
-              placeholder="Conte um pouco sobre o seu negócio e o que você precisa..."
+              placeholder="Tell me a bit about your business and what you need..."
               className="rounded-xl border-border bg-background/60 px-4 py-3 text-base focus-visible:border-primary/60 focus-visible:ring-primary/40"
               aria-invalid={!!errors.message}
             />
@@ -132,10 +132,10 @@ export function Contact() {
           </div>
 
           <Button type="submit" variant="neon" size="xl" className="w-full">
-            <Send /> Solicitar Orçamento
+            <Send /> Request a Quote
           </Button>
           <p className="text-center text-xs text-muted-foreground">
-            Ao enviar, o WhatsApp abre com sua mensagem pronta.
+            On submit, WhatsApp opens with your message ready to send.
           </p>
         </form>
       </div>

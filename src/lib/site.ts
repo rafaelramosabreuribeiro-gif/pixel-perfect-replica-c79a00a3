@@ -11,16 +11,16 @@ export const site = {
   github: "https://github.com/rafaelramosabreuribeiro-gif",
 };
 
-export function whatsappLink(message = "Olá, Rafael! Vim pelo seu portfólio e gostaria de um orçamento.") {
+export function whatsappLink(message = "Hi Rafael! I found your portfolio and I'd like to talk about a project.") {
   return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
 export const navLinks = [
-  { label: "Início", href: "#inicio" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Contato", href: "#contato" },
+  { label: "Home", href: "#home" },
+  { label: "Projects", href: "#projects" },
+  { label: "Services", href: "#services" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ] as const;
 
 export type Project = {
@@ -39,10 +39,10 @@ export const projects: Project[] = [
   {
     index: "01",
     name: "Odonto Prime",
-    subtitle: "Landing Page para Clínica Odontológica",
-    category: "Saúde & Bem-Estar · Projeto Conceitual",
+    subtitle: "Dental Clinic & Aesthetics",
+    category: "Healthcare & Aesthetics · Showcase Project",
     description:
-      "Landing page moderna com foco em agendamento de consultas via WhatsApp, usabilidade e apresentação de tratamentos.",
+      "High-converting landing page for a modern dental clinic featuring interactive treatment showcases, online appointment booking, patient reviews, and dark/light UI accents.",
     tech: ["React", "TypeScript", "Tailwind CSS"],
     image: odontoImg.url,
     siteUrl: "https://odonto-prime-smile-guide.lovable.app/",
@@ -50,11 +50,11 @@ export const projects: Project[] = [
   },
   {
     index: "02",
-    name: "APEX",
-    subtitle: "Consultoria Fitness & Personal Trainer",
-    category: "Esportes & Saúde · Projeto Conceitual",
+    name: "APEX Fitness",
+    subtitle: "High Performance Training",
+    category: "Sports & Personal Training · Showcase Project",
     description:
-      "Landing page interativa e de alto impacto para consultoria fitness, com foco em conversão de alunos, tabela de planos, interatividade e estética néon.",
+      "Ultra-modern landing page for a fitness brand featuring membership tier cards, training program showcases, interactive BMI calculator, and dark neon aesthetics.",
     tech: ["React", "TypeScript", "Tailwind CSS"],
     image: apexImg.url,
     siteUrl: "https://pixel-perfect-mirror-6217.lovable.app/",
@@ -64,10 +64,10 @@ export const projects: Project[] = [
   {
     index: "03",
     name: "SAVR",
-    subtitle: "Fine Dining & Gastronomia",
-    category: "Gastronomia & Eventos · Projeto Conceitual",
+    subtitle: "Fine Dining & Gastronomy",
+    category: "Hospitality & Gastronomy · Showcase Project",
     description:
-      "Landing page sofisticada de alta gastronomia, com menu interativo por categorias, reserva de mesas via WhatsApp, galeria imersiva e estética dark refinada.",
+      "Sophisticated fine dining landing page with interactive menu filtering, online table reservations via WhatsApp, luxury photo gallery, and refined dark amber visuals.",
     tech: ["React", "TypeScript", "Tailwind CSS"],
     image: savrImg,
     siteUrl: "https://savr-golden-table-experience.lovable.app/",

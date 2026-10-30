@@ -5,7 +5,7 @@ import { whatsappLink } from "@/lib/site";
 
 describe("quote form", () => {
   it("rejects a request without a name", () => {
-    const r = quoteSchema.safeParse({ name: "", contact: "a@b.com", type: "Landing Page", message: "Preciso de um site" });
+    const r = quoteSchema.safeParse({ name: "", contact: "a@b.com", type: "Landing Page", message: "I need a website" });
     expect(r.success).toBe(false);
   });
 
@@ -13,11 +13,11 @@ describe("quote form", () => {
     const msg = buildQuoteMessage({
       name: "Ana",
       contact: "ana@email.com",
-      type: "Site Institucional",
-      message: "Site para minha padaria",
+      type: "Business Website",
+      message: "Website for my bakery",
     });
-    expect(msg).toContain("*Nome:* Ana");
-    expect(msg).toContain("*Tipo de projeto:* Site Institucional");
-    expect(whatsappLink(msg)).toContain(encodeURIComponent("*Nome:* Ana"));
+    expect(msg).toContain("*Name:* Ana");
+    expect(msg).toContain("*Project type:* Business Website");
+    expect(whatsappLink(msg)).toContain(encodeURIComponent("*Name:* Ana"));
   });
 });

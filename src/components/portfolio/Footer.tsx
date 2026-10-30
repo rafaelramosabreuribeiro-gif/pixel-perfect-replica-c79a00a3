@@ -10,10 +10,10 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 md:flex-row md:items-center md:justify-between">
         <div>
           <Logo />
-          <p className="mt-2 text-sm text-muted-foreground">Sites e landing pages que geram resultado.</p>
+          <p className="mt-2 text-sm text-muted-foreground">Let's build your next web project together.</p>
         </div>
 
-        <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Rodapé">
+        <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Footer">
           {navLinks.map((l) => (
             <a key={l.href} href={l.href} className="text-sm text-muted-foreground transition-colors hover:text-primary">
               {l.label}
@@ -39,9 +39,12 @@ export function Footer() {
           ))}
         </div>
       </div>
-      <p className="border-t border-border py-6 text-center font-mono text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {site.name} · Feito com React & Tailwind CSS
-      </p>
+      <div className="flex flex-col items-center gap-1 border-t border-border py-6 text-center font-mono text-xs text-muted-foreground">
+        <p className="text-primary/80">Demonstrative Freelance Portfolio</p>
+        <p>
+          © {new Date().getFullYear()} {site.name} · Built with React & Tailwind CSS
+        </p>
+      </div>
     </footer>
   );
 }
