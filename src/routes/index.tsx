@@ -8,9 +8,9 @@ import { Hero } from "@/components/portfolio/Hero";
 import { Projects } from "@/components/portfolio/Projects";
 import { Services } from "@/components/portfolio/Services";
 
-const title = "Rafael Ramos — Desenvolvedor Web | Sites e Landing Pages";
+const title = "Rafael Ramos — Creative Web Developer & UI Specialist";
 const description =
-  "Sites e landing pages modernos, ultrarrápidos e perfeitos no celular, feitos para transformar visitantes em clientes.";
+  "I craft high-converting, modern, and responsive landing pages built with React, TypeScript, and Tailwind CSS.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

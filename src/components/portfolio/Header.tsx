@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 export function Logo() {
   return (
-    <a href="#inicio" className="font-mono text-[0.95rem] font-semibold tracking-tight" aria-label="Rafael Ramos — início">
+    <a href="#home" className="font-mono text-[0.95rem] font-semibold tracking-tight" aria-label="Rafael Ramos — home">
       <span className="text-muted-foreground">&lt;</span>
       <span className="text-foreground">Rafael</span>
       <span className="text-gradient">Ramos</span>
@@ -37,7 +37,7 @@ export function Header() {
       >
         <Logo />
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Principal">
+        <nav className="hidden items-center gap-1 md:flex" aria-label="Main">
           {navLinks.map((l) => (
             <a
               key={l.href}
@@ -51,14 +51,14 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <Button asChild variant="neon" size="pill" className="hidden sm:inline-flex">
-            <a href="#contato">Solicitar Orçamento</a>
+            <a href="#contact">Get a Quote</a>
           </Button>
           <Button
             variant="ghost"
             size="icon"
             className="rounded-full md:hidden"
             onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
             {open ? <X /> : <Menu />}
@@ -68,7 +68,7 @@ export function Header() {
 
       {open && (
         <div className="glass mx-auto mt-2 max-w-6xl rounded-3xl p-3 shadow-card md:hidden animate-in fade-in slide-in-from-top-2">
-          <nav className="flex flex-col" aria-label="Menu móvel">
+          <nav className="flex flex-col" aria-label="Mobile menu">
             {navLinks.map((l) => (
               <a
                 key={l.href}
@@ -81,8 +81,8 @@ export function Header() {
             ))}
           </nav>
           <Button asChild variant="neon" size="xl" className="mt-2 w-full">
-            <a href="#contato" onClick={() => setOpen(false)}>
-              Solicitar Orçamento
+            <a href="#contact" onClick={() => setOpen(false)}>
+              Get a Quote
             </a>
           </Button>
         </div>

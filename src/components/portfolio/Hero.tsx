@@ -1,9 +1,7 @@
-import { ArrowUpRight, Gauge, Smartphone } from "lucide-react";
+import { ArrowUpRight, Gauge, Mail, Smartphone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { useTilt } from "@/hooks/use-tilt";
-import { whatsappLink } from "@/lib/site";
-import { WhatsAppIcon } from "./icons";
 
 function CodeMockup() {
   const tilt = useTilt<HTMLDivElement>(5);
@@ -30,22 +28,22 @@ function CodeMockup() {
         </div>
         <pre className="overflow-x-auto px-5 py-5 font-mono text-[0.78rem] leading-relaxed sm:text-sm">
           <code>
-            <span className={c}>{"// feito para converter"}</span>
+            <span className={c}>{"// built to convert"}</span>
             {"\n"}
             <span className={k}>export default function</span> <span className={f}>LandingPage</span>() {"{"}
             {"\n  "}
-            <span className={k}>const</span> cliente = <span className={f}>useVisitante</span>();
+            <span className={k}>const</span> visitor = <span className={f}>useVisitor</span>();
             {"\n\n  "}
             <span className={k}>return</span> (
             {"\n    "}
             <span className={t}>&lt;Hero</span>
-            {"\n      "}titulo=<span className={s}>"Seu negócio, online"</span>
+            {"\n      "}title=<span className={s}>"Your business, online"</span>
             {"\n      "}performance=<span className={s}>{"{100}"}</span>
-            {"\n      "}mobile=<span className={s}>"perfeito"</span>
+            {"\n      "}mobile=<span className={s}>"flawless"</span>
             {"\n    "}
             <span className={t}>/&gt;</span>
             {"\n    "}
-            <span className={t}>&lt;CTA</span> onClick={"{"}() =&gt; cliente.<span className={f}>converter</span>(){"}"}{" "}
+            <span className={t}>&lt;CTA</span> onClick={"{"}() =&gt; visitor.<span className={f}>convert</span>(){"}"}{" "}
             <span className={t}>/&gt;</span>
             {"\n  "});
             {"\n"}
@@ -78,7 +76,7 @@ function CodeMockup() {
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden pb-16 pt-32 md:pb-20 md:pt-44">
+    <section id="home" className="relative overflow-hidden pb-16 pt-32 md:pb-20 md:pt-44">
       <div className="absolute inset-0 bg-grid" aria-hidden />
       <div className="absolute -right-40 top-10 size-[520px] orb-cyan" aria-hidden />
 
@@ -86,27 +84,27 @@ export function Hero() {
         <div className="min-w-0">
           <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-xs text-muted-foreground">
             <span className="size-2 rounded-full bg-primary animate-pulse-glow" />
-            Disponível para novos projetos
+            Available for new projects
           </span>
 
           <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-[3.6rem]">
-            Sites e landing pages que transformam <span className="text-gradient">visitantes em clientes</span>
+            Creative Web Developer & <span className="text-gradient">UI Specialist</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Design moderno, carregamento ultrarrápido e experiência perfeita no celular — feitos para gerar
-            resultados para o seu negócio.
+            I craft high-converting, modern, and responsive landing pages built with React, TypeScript, and
+            Tailwind CSS.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild variant="neon" size="xl">
-              <a href="#projetos">
-                Ver Projetos <ArrowUpRight />
+              <a href="#projects">
+                View Projects <ArrowUpRight />
               </a>
             </Button>
             <Button asChild variant="glass" size="xl">
-              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon /> Falar no WhatsApp
+              <a href="#contact">
+                <Mail /> Contact Me
               </a>
             </Button>
           </div>

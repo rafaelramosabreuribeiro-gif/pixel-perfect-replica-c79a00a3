@@ -18,7 +18,7 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="relative aspect-[12/7] overflow-hidden border-b border-border">
         <img
           src={project.image}
-          alt={`Prévia do site ${project.name}`}
+          alt={`Preview of the ${project.name} website`}
           loading="lazy"
           width={1200}
           height={700}
@@ -36,7 +36,7 @@ function ProjectCard({ project }: { project: Project }) {
         </h3>
         <p className="mt-3 leading-relaxed text-muted-foreground">{project.description}</p>
 
-        <ul className="mt-5 flex flex-wrap gap-2" aria-label="Tecnologias">
+        <ul className="mt-5 flex flex-wrap gap-2" aria-label="Tech stack">
           {project.tech.map((t) => (
             <li key={t} className="rounded-full border border-border bg-secondary/60 px-3 py-1 font-mono text-xs">
               {t}
@@ -47,18 +47,18 @@ function ProjectCard({ project }: { project: Project }) {
         <div className="mt-auto flex flex-wrap gap-3 pt-7">
           <Button asChild variant="neon" size="pill">
             <a href={project.siteUrl} target="_blank" rel="noopener noreferrer">
-              Acessar Site <ArrowUpRight />
+              Live Demo <ArrowUpRight />
             </a>
           </Button>
           {project.codeUrl ? (
             <Button asChild variant="glass" size="pill">
               <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
-                <Github /> Ver Código
+                <Github /> View Code
               </a>
             </Button>
           ) : (
             <Button variant="glass" size="pill" disabled>
-              <Github /> Código em breve
+              <Github /> Code coming soon
             </Button>
           )}
         </div>
@@ -70,10 +70,10 @@ function ProjectCard({ project }: { project: Project }) {
 export function Projects() {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="projetos" className="relative py-20 md:py-24">
+    <section id="projects" className="relative py-20 md:py-24">
       <div ref={ref} className="reveal mx-auto max-w-6xl px-5">
-        <SectionHeading eyebrow="projetos em destaque" title="Trabalhos recentes">
-          Landing pages pensadas para converter, com visual marcante e navegação fluida em qualquer tela.
+        <SectionHeading eyebrow="featured projects" title="Recent work">
+          Landing pages designed to convert, with striking visuals and smooth navigation on any screen.
         </SectionHeading>
 
         <div className="mt-14 grid gap-7 md:grid-cols-2">

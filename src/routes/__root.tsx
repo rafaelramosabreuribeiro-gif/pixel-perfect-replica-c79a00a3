@@ -79,12 +79,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rafael Ramos — Desenvolvedor Web" },
-      { name: "description", content: "Sites e landing pages que transformam visitantes em clientes." },
+      { title: "Rafael Ramos — Creative Web Developer" },
+      { name: "description", content: "High-converting, modern and responsive landing pages built with React, TypeScript and Tailwind CSS." },
       { name: "author", content: "Rafael Ramos" },
       { name: "theme-color", content: "#0d1418" },
-      { property: "og:title", content: "Rafael Ramos — Desenvolvedor Web" },
-      { property: "og:description", content: "Sites e landing pages que transformam visitantes em clientes." },
+      { property: "og:title", content: "Rafael Ramos — Creative Web Developer" },
+      { property: "og:description", content: "High-converting, modern and responsive landing pages built with React, TypeScript and Tailwind CSS." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -110,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="en">
       <head>
         <HeadContent />
       </head>
