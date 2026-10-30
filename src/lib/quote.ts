@@ -2,29 +2,29 @@ import { z } from "zod";
 
 export const projectTypes = [
   "Landing Page",
-  "Site Institucional",
-  "Otimização / Redesign",
-  "Integração com WhatsApp",
-  "Outro",
+  "Business Website",
+  "Redesign / Optimization",
+  "SEO & Performance",
+  "Other",
 ] as const;
 
 export const quoteSchema = z.object({
-  name: z.string().trim().min(2, "Informe seu nome").max(80, "Nome muito longo"),
-  contact: z.string().trim().min(5, "Informe um e-mail ou telefone").max(120, "Contato muito longo"),
+  name: z.string().trim().min(2, "Please enter your name").max(80, "Name is too long"),
+  contact: z.string().trim().min(5, "Please enter an e-mail or phone number").max(120, "Contact is too long"),
   type: z.enum(projectTypes),
-  message: z.string().trim().min(10, "Conte um pouco mais sobre o projeto").max(1000, "Mensagem muito longa"),
+  message: z.string().trim().min(10, "Tell me a bit more about your project").max(1000, "Message is too long"),
 });
 
 export type Quote = z.infer<typeof quoteSchema>;
 
 export function buildQuoteMessage(q: Quote) {
   return [
-    "Olá, Rafael! Gostaria de solicitar um orçamento.",
+    "Hi Rafael! I'd like to request a quote.",
     "",
-    `*Nome:* ${q.name}`,
-    `*Contato:* ${q.contact}`,
-    `*Tipo de projeto:* ${q.type}`,
+    `*Name:* ${q.name}`,
+    `*Contact:* ${q.contact}`,
+    `*Project type:* ${q.type}`,
     "",
-    `*Sobre o projeto:* ${q.message}`,
+    `*About the project:* ${q.message}`,
   ].join("\n");
 }

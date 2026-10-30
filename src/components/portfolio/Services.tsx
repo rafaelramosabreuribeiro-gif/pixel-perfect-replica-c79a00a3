@@ -1,13 +1,11 @@
-import { Building2, MonitorSmartphone, Rocket, type LucideIcon } from "lucide-react";
-import type { ComponentType, SVGProps } from "react";
+import { Code2, Gauge, MonitorSmartphone, ShieldCheck, type LucideIcon } from "lucide-react";
 
 import { useReveal } from "@/hooks/use-reveal";
 import { useTilt } from "@/hooks/use-tilt";
-import { WhatsAppIcon } from "./icons";
 import { SectionHeading } from "./SectionHeading";
 
 type Service = {
-  icon: LucideIcon | ComponentType<SVGProps<SVGSVGElement>>;
+  icon: LucideIcon;
   title: string;
   text: string;
   points: string[];
@@ -15,28 +13,28 @@ type Service = {
 
 const services: Service[] = [
   {
-    icon: Rocket,
-    title: "Landing Pages de Alta Conversão",
-    text: "Páginas focadas em um objetivo: transformar visitas em contatos, agendamentos e vendas.",
-    points: ["Copy e estrutura persuasivas", "CTAs estratégicos"],
-  },
-  {
-    icon: Building2,
-    title: "Sites Institucionais",
-    text: "Presença profissional para sua empresa, com páginas claras sobre serviços, equipe e contato.",
-    points: ["Visual alinhado à marca", "Otimizado para o Google"],
+    icon: Code2,
+    title: "Custom Web Development (React + Tailwind CSS)",
+    text: "Hand-crafted websites and landing pages built around your brand, your audience and your goals.",
+    points: ["Clean, scalable code", "Conversion-focused layouts"],
   },
   {
     icon: MonitorSmartphone,
-    title: "Otimização Mobile & Redesign",
-    text: "Seu site atual mais rápido, moderno e impecável no celular — onde está a maioria dos seus clientes.",
-    points: ["Carregamento ultrarrápido", "Layout 100% responsivo"],
+    title: "Mobile-First & Responsive Design",
+    text: "Pixel-perfect on every screen — designed for the phone first, where most of your customers are.",
+    points: ["Flawless on any device", "Smooth, intuitive navigation"],
   },
   {
-    icon: WhatsAppIcon,
-    title: "Integração com WhatsApp",
-    text: "Botões e formulários que levam o cliente direto para a sua conversa, com mensagem pronta.",
-    points: ["Atendimento imediato", "Mensagens pré-preenchidas"],
+    icon: Gauge,
+    title: "High-Speed Performance & SEO Optimization",
+    text: "Fast-loading pages structured to rank on Google and keep visitors from bouncing.",
+    points: ["Top Lighthouse scores", "Search-ready structure"],
+  },
+  {
+    icon: ShieldCheck,
+    title: "SSL Security & Dedicated Hosting Management",
+    text: "Your site stays secure, online and up to date, so you can focus on running your business.",
+    points: ["HTTPS by default", "Domain & hosting setup"],
   },
 ];
 
@@ -69,11 +67,11 @@ function ServiceCard({ service }: { service: Service }) {
 export function Services() {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="servicos" className="relative py-20 md:py-24">
+    <section id="services" className="relative py-20 md:py-24">
       <div className="absolute -left-40 top-1/3 size-[480px] orb-neon opacity-60" aria-hidden />
       <div ref={ref} className="reveal relative mx-auto max-w-6xl px-5">
-        <SectionHeading eyebrow="serviços" title="Como posso ajudar o seu negócio">
-          Soluções sob medida, do primeiro rascunho ao site no ar.
+        <SectionHeading eyebrow="services" title="Services & Solutions">
+          Tailored solutions, from the first sketch to your site going live.
         </SectionHeading>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s) => (

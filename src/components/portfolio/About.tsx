@@ -6,36 +6,36 @@ import { SectionHeading } from "./SectionHeading";
 const pillars = [
   {
     icon: Brain,
-    title: "Raciocínio analítico",
-    text: "Antes do código, entendo o seu público, a sua oferta e o caminho que leva o visitante até o contato.",
+    title: "Analytical thinking",
+    text: "Before writing code, I study your audience, your offer and the path that turns a visitor into a lead.",
   },
   {
     icon: Sparkles,
-    title: "Velocidade com IA",
-    text: "Uso ferramentas de IA no fluxo de trabalho para entregar em dias o que antes levava semanas — sem abrir mão da qualidade.",
+    title: "AI-powered speed",
+    text: "I use AI tools in my workflow to deliver in days what used to take weeks — without cutting corners on quality.",
   },
   {
     icon: Target,
-    title: "Foco em conversão",
-    text: "Cada seção tem um propósito: gerar valor real e mais clientes para o seu negócio.",
+    title: "Conversion focus",
+    text: "Every section has a purpose: creating real value and more customers for your business.",
   },
 ];
 
 export function About() {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="sobre" className="relative py-20 md:py-24">
+    <section id="about" className="relative py-20 md:py-24">
       <div ref={ref} className="reveal mx-auto grid max-w-6xl gap-14 px-5 lg:grid-cols-[1fr_1.1fr] lg:items-center">
         <div>
-          <SectionHeading eyebrow="sobre mim" title={<>Olá, eu sou o <span className="text-gradient">Rafael Ramos</span></>} />
+          <SectionHeading eyebrow="about me" title={<>Hi, I'm <span className="text-gradient">Rafael Ramos</span></>} />
           <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
             <p>
-              Sou desenvolvedor web e crio sites e landing pages para negócios que querem ser encontrados, transmitir
-              confiança e vender mais pela internet.
+              I'm a web developer who builds websites and landing pages for businesses that want to be found, earn
+              trust and sell more online.
             </p>
             <p>
-              Combino um olhar analítico com a agilidade das ferramentas de IA para entregar projetos rápidos,
-              bonitos e, principalmente, que trazem resultado para o cliente.
+              I combine an analytical mindset with the speed of AI tools to deliver projects that are fast, beautiful
+              and, above all, bring real results to my clients.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export function About() {
               <span className="text-code-string">"Tailwind"</span>],
             </p>
             <p className="pl-5">
-              objetivo: <span className="text-code-string">"seu crescimento"</span>,
+              goal: <span className="text-code-string">"your growth"</span>,
             </p>
             <p>{"}"};</p>
           </div>
